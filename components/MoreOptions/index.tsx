@@ -1,4 +1,4 @@
-import { setModal } from '@/redux/modal/slice'
+import { setOpenUpload } from '@/redux/modal/slice'
 import clsx from 'clsx'
 import {
   DetailedHTMLProps,
@@ -29,7 +29,7 @@ export const MoreOptions = ({
         {tasks && (
           <span
             onClick={() => {
-              dispatch(setModal(true))
+              dispatch(setOpenUpload(true))
               setOpen(false)
             }}
           >

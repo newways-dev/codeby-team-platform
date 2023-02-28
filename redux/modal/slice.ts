@@ -1,23 +1,39 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 interface ModalSliceState {
-  openModal: boolean
+  openUpload: boolean
+  createTeam: boolean
+  joinTeam: boolean
+  addIntoTeam: boolean
 }
 
 const initialState: ModalSliceState = {
-  openModal: false,
+  openUpload: false,
+  createTeam: false,
+  joinTeam: false,
+  addIntoTeam: false,
 }
 
 const modalSlice = createSlice({
   name: 'modal',
   initialState: initialState,
   reducers: {
-    setModal: (state, action: PayloadAction<boolean>) => {
-      state.openModal = action.payload
+    setOpenUpload: (state, action: PayloadAction<boolean>) => {
+      state.openUpload = action.payload
+    },
+    setCreateTeam: (state, action: PayloadAction<boolean>) => {
+      state.createTeam = action.payload
+    },
+    setJoinTeam: (state, action: PayloadAction<boolean>) => {
+      state.joinTeam = action.payload
+    },
+    setAddIntoTeam: (state, action: PayloadAction<boolean>) => {
+      state.addIntoTeam = action.payload
     },
   },
 })
 
-export const { setModal } = modalSlice.actions
+export const { setOpenUpload, setCreateTeam, setJoinTeam, setAddIntoTeam } =
+  modalSlice.actions
 
 export default modalSlice.reducer

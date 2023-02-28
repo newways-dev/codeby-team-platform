@@ -1,0 +1,78 @@
+.addIntoTeam {
+  width: 40%;
+
+  @media screen and (max-width: 1366px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 95%;
+  }
+
+  .wrapper {
+    padding-top: 2px;
+
+    .card {
+      cursor: pointer;
+    }
+
+    .users {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .title {
+      margin-top: 20px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      margin-bottom: 9px;
+    }
+
+    .selected {
+      border-radius: 8px;
+      background-color: var(--background-secondary);
+
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      position: relative;
+      gap: 6px;
+
+      min-height: 52px;
+      padding: 8px 12px;
+
+      .tag {
+        color: var(--green);
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        padding: 6px 16px;
+        border-radius: 10px;
+        background: rgba(136, 204, 20, 0.3);
+
+        svg {
+          cursor: pointer;
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      button {
+        position: absolute;
+        right: 20px;
+        width: 100px;
+        height: 35px;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 13px;
+      }
+    }
+  }
+}

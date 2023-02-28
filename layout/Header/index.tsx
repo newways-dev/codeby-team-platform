@@ -33,7 +33,9 @@ export const Header = ({ className }: HeaderProps) => {
           {route === '/profile' && 'Профиль'}
           {route === '/settings' && 'Настройки'}
           {route === '/admin' && 'Панель администратора'}
+          {route === '/team' && 'Команда'}
         </span>
+        <p></p>
         <Menu
           className={styles.menu}
           onClick={() => dispatch(setOpen(!openMenu))}
@@ -42,11 +44,13 @@ export const Header = ({ className }: HeaderProps) => {
         <MobileSearch className={styles.mobileSearch} />
         <div className={styles.options}>
           <Search className={styles.search} />
-          <div className={styles.notification}>
-            <Notification />
-            <BellCircle className={styles.circle} />
+          <div className={styles.rightWrapper}>
+            <div className={styles.notification}>
+              <Notification />
+              <BellCircle className={styles.circle} />
+            </div>
+            <Profile className={styles.profile} />
           </div>
-          <Profile className={styles.profile} />
         </div>
       </div>
     </header>

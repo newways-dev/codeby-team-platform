@@ -19,6 +19,12 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "svg.d.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "svg.d.ts",
+    "components/Modal/CreateTeam/CreateTeam.module.scss"
+  ],
   "exclude": ["node_modules"]
 }

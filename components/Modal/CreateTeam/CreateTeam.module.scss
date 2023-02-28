@@ -1,0 +1,35 @@
+.createTeam {
+  width: 40%;
+
+  @media screen and (max-width: 1366px) {
+    width: 60%;
+  }
+
+  @media screen and (max-width: 720px) {
+    width: 95%;
+  }
+
+  .fields {
+    display: grid;
+    gap: 16px;
+
+    input,
+    textarea {
+      width: 100%;
+    }
+  }
+
+  .buttons {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+
+    button {
+      font-size: 12px;
+      width: 100px;
+      height: 35px;
+    }
+  }
+}

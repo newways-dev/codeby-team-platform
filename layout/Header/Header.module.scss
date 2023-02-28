@@ -10,6 +10,7 @@
     justify-content: space-between;
 
     .title {
+      white-space: nowrap;
       color: #fff;
       font-weight: 700;
       font-size: 24px;
@@ -51,7 +52,6 @@
       gap: 26px;
 
       @media screen and (max-width: 720px) {
-        width: 100%;
         justify-content: space-between;
       }
 
@@ -63,15 +63,21 @@
         }
       }
 
-      .notification {
-        position: relative;
-        .circle {
-          position: absolute;
-          right: -2px;
-          top: 0;
+      .rightWrapper {
+        display: flex;
+        align-items: center;
+        gap: 26px;
 
-          width: 10px;
-          height: 10px;
+        .notification {
+          position: relative;
+          .circle {
+            position: absolute;
+            right: -2px;
+            top: 0;
+
+            width: 10px;
+            height: 10px;
+          }
         }
       }
     }

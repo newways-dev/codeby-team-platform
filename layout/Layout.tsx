@@ -3,19 +3,30 @@ import { Header } from './Header'
 import { Sidebar } from './Sidebar'
 import styles from './Layout.module.scss'
 import { useSelector } from 'react-redux'
-import { selectModal } from '@/redux/modal/selector'
 import { Modal } from '@/components'
+import {
+  selectAddIntoTeam,
+  selectCreateTeam,
+  selectJoinTeam,
+  selectOpenUpload,
+} from '@/redux/modal/selector'
 
 export interface LayoutProps {
   children: ReactNode
 }
 
 export const Layout = ({ children }: LayoutProps): JSX.Element => {
-  const { openModal } = useSelector(selectModal)
+  const addIntoTeam = useSelector(selectAddIntoTeam)
+  const openUpload = useSelector(selectOpenUpload)
+  const createTeam = useSelector(selectCreateTeam)
+  const joinTeam = useSelector(selectJoinTeam)
 
   return (
     <div className={styles.layout}>
-      {openModal && <Modal />}
+      {openUpload && <Modal type='upload' />}
+      {createTeam && <Modal type='createTeam' />}
+      {joinTeam && <Modal type='joinTeam' />}
+      {addIntoTeam && <Modal type='addIntoTeam' />}
       <Header className={styles.header} />
       <Sidebar className={styles.sidebar} />
       <main className={styles.main}>{children}</main>
