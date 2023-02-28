@@ -24,7 +24,7 @@ const usersData = [
     nickname: 'Mark',
   },
   {
-    nickname: 'Alice',
+    nickname: 'Vika',
   },
 ]
 
