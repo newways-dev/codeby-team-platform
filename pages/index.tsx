@@ -4,6 +4,7 @@ import {
   Complete,
   News,
   Progress,
+  Teams,
   TopFifty,
   TopTen,
 } from '@/page-components'
@@ -20,6 +21,9 @@ const Home = () => {
       </Card>
       <Card title='Последние новости' className={styles.news}>
         <News />
+      </Card>
+      <Card title='Команды' className={styles.teams}>
+        <Teams />
       </Card>
       <Card title='Рейтинг Топ-10 участников' className={styles.top10}>
         <TopTen />

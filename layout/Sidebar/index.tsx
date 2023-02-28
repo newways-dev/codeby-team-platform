@@ -1,19 +1,18 @@
 import clsx from 'clsx'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from 'react'
-import CloseIcon from '../../public/icons/close.svg'
-import Logo from './icons/logo.svg'
-import MiniLogo from './icons/mini-logo.svg'
 import { routes } from './routes'
-import { setOpen as setOpenMenu } from '@/redux/mobileMenu/slice'
-
-import { TelegramChat } from '@/components'
-import { useDispatch, useSelector } from 'react-redux'
-import { selectMenu } from '@/redux/mobileMenu/selector'
-import styles from './Sidebar.module.scss'
+import { motion } from 'framer-motion'
 import { useRouter } from 'next/router'
+import { TelegramChat } from '@/components'
+import { setOpen as setOpenMenu } from '@/redux/mobileMenu/slice'
+import { DetailedHTMLProps, HTMLAttributes, useEffect, useState } from 'react'
+import { selectMenu } from '@/redux/mobileMenu/selector'
 import { selectUserRole } from '@/redux/user/selector'
+import { useDispatch, useSelector } from 'react-redux'
+import CloseIcon from '../../public/icons/close.svg'
+import MiniLogo from './icons/mini-logo.svg'
+import Logo from './icons/logo.svg'
+import styles from './Sidebar.module.scss'
 
 export interface SidebarProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {
@@ -208,6 +207,38 @@ export const Sidebar = ({ className }: SidebarProps) => {
               />
             </Link>
           </li>
+          <li
+            onClick={() => {
+              openMenu && dispatch(setOpenMenu(false))
+            }}
+          >
+            <Link
+              href={routes[4].path}
+              className={clsx(
+                styles.link,
+                route === routes[4].path && styles.activeLink,
+                {
+                  [styles.activeRouteMobile]:
+                    openMenu && route === routes[4].path,
+                },
+                { [styles.mobileSidebarRoute]: openMenu }
+              )}
+            >
+              <div
+                className={clsx(
+                  route === routes[4].path && styles.activeRouteIcon
+                )}
+              >
+                {routes[4].icon}
+              </div>
+              {open && <p>{routes[4].name}</p>}
+              <div
+                className={clsx(
+                  route === routes[4].path && styles.activeBorder
+                )}
+              />
+            </Link>
+          </li>
           <div
             className={clsx(styles.settings, {
               [styles.mobileSettings]: openMenu,
@@ -220,28 +251,28 @@ export const Sidebar = ({ className }: SidebarProps) => {
                 }}
               >
                 <Link
-                  href={routes[4].path}
+                  href={routes[5].path}
                   className={clsx(
                     styles.link,
-                    route === routes[4].path && styles.activeLink,
+                    route === routes[5].path && styles.activeLink,
                     {
                       [styles.activeRouteMobile]:
-                        openMenu && route === routes[4].path,
+                        openMenu && route === routes[5].path,
                     },
                     { [styles.mobileSidebarRoute]: openMenu }
                   )}
                 >
                   <div
                     className={clsx(
-                      route === routes[4].path && styles.activeRouteIcon
+                      route === routes[5].path && styles.activeRouteIcon
                     )}
                   >
-                    {routes[4].icon}
+                    {routes[5].icon}
                   </div>
-                  {open && <p>{routes[4].name}</p>}
+                  {open && <p>{routes[5].name}</p>}
                   <div
                     className={clsx(
-                      route === routes[4].path && styles.activeBorder
+                      route === routes[5].path && styles.activeBorder
                     )}
                   />
                 </Link>
@@ -253,28 +284,28 @@ export const Sidebar = ({ className }: SidebarProps) => {
               }}
             >
               <Link
-                href={routes[5].path}
+                href={routes[6].path}
                 className={clsx(
                   styles.link,
-                  route === routes[5].path && styles.activeLink,
+                  route === routes[6].path && styles.activeLink,
                   {
                     [styles.activeRouteMobile]:
-                      openMenu && route === routes[5].path,
+                      openMenu && route === routes[6].path,
                   },
                   { [styles.mobileSidebarRoute]: openMenu }
                 )}
               >
                 <div
                   className={clsx(
-                    route === routes[5].path && styles.activeRouteIcon
+                    route === routes[6].path && styles.activeRouteIcon
                   )}
                 >
-                  {routes[5].icon}
+                  {routes[6].icon}
                 </div>
-                {open && <p>{routes[5].name}</p>}
+                {open && <p>{routes[6].name}</p>}
                 <div
                   className={clsx(
-                    route === routes[5].path && styles.activeBorder
+                    route === routes[6].path && styles.activeBorder
                   )}
                 />
               </Link>
@@ -285,9 +316,9 @@ export const Sidebar = ({ className }: SidebarProps) => {
               }}
               className={clsx({ [styles.mobileSidebarRoute]: openMenu })}
             >
-              <Link href={routes[6].path} className={clsx(styles.link)}>
-                <div>{routes[6].icon}</div>
-                {open && <p>{routes[6].name}</p>}
+              <Link href={routes[7].path} className={clsx(styles.link)}>
+                <div>{routes[7].icon}</div>
+                {open && <p>{routes[7].name}</p>}
               </Link>
             </li>
           </div>

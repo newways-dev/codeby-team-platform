@@ -5,6 +5,7 @@ import User from './icons/User.svg'
 import Settings from './icons/Settings.svg'
 import Logout from './icons/Logout.svg'
 import Admin from './icons/admin.svg'
+import Team from './icons/team.svg'
 
 export const routes = [
   {
@@ -26,6 +27,11 @@ export const routes = [
     path: '/profile',
     name: 'Профиль',
     icon: <User />,
+  },
+  {
+    path: '/team',
+    name: 'Команда',
+    icon: <Team />,
   },
   {
     path: '/admin',
