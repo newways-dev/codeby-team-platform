@@ -1,0 +1,54 @@
+.tag {
+  cursor: pointer;
+  height: 26px;
+  max-width: 150px;
+  border-radius: 70px;
+  padding: 5px 15px;
+
+  background-color: var(--background-secondary);
+  border: 0.703654px solid rgba(109, 125, 147, 0.15);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: 800px) {
+    padding: 3px 12px;
+  }
+
+  p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 13px;
+  }
+}
+
+.admin {
+  background-color: var(--blue);
+}
+.crypto {
+  background-color: var(--green);
+  color: var(--background);
+}
+.forensics {
+  background-color: var(--red);
+}
+.entertainment {
+  background-color: darkslateblue;
+}
+.reverse {
+  background-color: blueviolet;
+}
+.steno {
+  background-color: chocolate;
+}
+.web {
+  background-color: crimson;
+}
+.pwn {
+  background-color: darkcyan;
+}
+.quest {
+  background-color: hotpink;
+}

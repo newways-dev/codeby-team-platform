@@ -1,0 +1,35 @@
+.completeCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 18px;
+  height: 82px;
+
+  background-color: var(--background-secondary);
+  border-radius: 7px;
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .info {
+      @media screen and (max-width: 450px) {
+        margin-left: -18px;
+      }
+
+      .title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+      }
+
+      .date {
+        margin-top: 7px;
+        font-weight: 700;
+        font-size: 12px;
+        color: #6d7d93;
+      }
+    }
+  }
+}

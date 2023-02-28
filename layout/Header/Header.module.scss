@@ -1,0 +1,79 @@
+.header {
+  background-color: var(--background);
+  height: 90px;
+
+  .wrapper {
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      color: #fff;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 31px;
+
+      @media screen and (max-width: 1366px) {
+        font-size: 16px;
+      }
+
+      @media screen and (max-width: 950px) {
+        display: none;
+      }
+    }
+
+    .menu {
+      display: none;
+
+      @media screen and (max-width: 720px) {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        height: 30px;
+        width: 60px;
+        margin-right: 40px;
+      }
+    }
+
+    .mobileSearch {
+      display: none;
+
+      @media screen and (max-width: 720px) {
+        display: block;
+      }
+    }
+
+    .options {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+
+      @media screen and (max-width: 720px) {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .search {
+        display: flex;
+
+        @media screen and (max-width: 720px) {
+          display: none;
+        }
+      }
+
+      .notification {
+        position: relative;
+        .circle {
+          position: absolute;
+          right: -2px;
+          top: 0;
+
+          width: 10px;
+          height: 10px;
+        }
+      }
+    }
+  }
+}

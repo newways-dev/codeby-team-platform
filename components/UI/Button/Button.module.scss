@@ -1,0 +1,39 @@
+.button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  height: 47px;
+
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 23px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.green {
+  background-color: var(--green);
+  border-radius: 8px;
+
+  &:active {
+    background-color: #88cd00;
+  }
+}
+.white {
+  background-color: #fff;
+  border-radius: 14px;
+
+  &:active {
+    background-color: #e2e2e4;
+  }
+}
+
+.red {
+  background: #ff3e3e;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #fff;
+}

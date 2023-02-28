@@ -1,0 +1,11 @@
+.news {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 26px;
+
+  @media screen and (max-width: 720px) {
+    align-items: center;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,93 @@
+.modalWrapper {
+  position: absolute;
+  z-index: 12000;
+
+  width: 100%;
+  height: 100vh;
+  max-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(212, 212, 212, 0.25);
+
+  padding: 20px;
+
+  .modal {
+    background-color: var(--background-secondary);
+    border-radius: 14px;
+
+    width: 612px;
+
+    .desc {
+      margin-bottom: 22px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: var(--gray);
+    }
+
+    .fields {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 26px;
+
+      grid-template-areas: 'title title' 'type port' 'heading heading';
+
+      @media screen and (max-width: 720px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'title' 'type' 'port' 'heading';
+      }
+
+      input {
+        width: 100%;
+      }
+
+      .title {
+        grid-area: title;
+      }
+      .type {
+        grid-area: type;
+
+        font-weight: 500;
+        font-size: 16px;
+        .select {
+          margin-top: 3px;
+          height: 50px;
+        }
+      }
+      .port {
+        grid-area: port;
+      }
+      .heading {
+        grid-area: heading;
+        position: relative;
+
+        .upload {
+          position: absolute;
+          top: 32px;
+          right: 20px;
+          font-size: 12px;
+
+          width: 100px;
+          height: 35px;
+        }
+      }
+    }
+
+    .buttons {
+      margin-top: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      gap: 10px;
+
+      button {
+        font-size: 12px;
+        width: 100px;
+        height: 35px;
+      }
+    }
+  }
+}

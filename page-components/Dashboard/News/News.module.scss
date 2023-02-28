@@ -1,0 +1,17 @@
+.news {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  width: 100%;
+
+  @media screen and (max-width: 1060px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
