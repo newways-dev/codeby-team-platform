@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
+import { NextResponse } from 'next/server'
 import { withLayout } from '@/layout/Layout'
 import styles from '../styles/Admin.module.scss'
 import { IconButton, Select } from '@/components'
@@ -14,6 +15,9 @@ import {
   Card,
   UsersList,
 } from '@/page-components'
+import { useRouter } from 'next/router'
+import { useSelector } from 'react-redux'
+import { selectUserRole } from '@/redux/user/selector'
 
 const Admin = () => {
   const [add, setAdd] = useState<boolean>(false)
@@ -28,6 +32,15 @@ const Admin = () => {
     'Задания',
     'Архив',
   ]
+
+  const router = useRouter()
+  const role = useSelector(selectUserRole)
+
+  useEffect(() => {
+    if (role === 'user') {
+      router.push('/')
+    }
+  }, [role, router])
 
   useEffect(() => {
     if (page === 'Новости') {
