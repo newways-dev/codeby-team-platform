@@ -50,28 +50,6 @@
         justify-content: right;
       }
 
-      .telegram {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
-
-        svg {
-          cursor: pointer;
-          width: 16px;
-          height: 16px;
-        }
-
-        border: 0;
-        width: 50px;
-        height: 35px;
-        background-color: var(--blue);
-
-        @media screen and (max-width: 720px) {
-          // display: none;
-        }
-      }
-
       .rightWrapper {
         display: flex;
         align-items: center;

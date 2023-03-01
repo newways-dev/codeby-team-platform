@@ -1,11 +1,4 @@
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer,
-} from 'recharts'
+import { BarChart, Bar, YAxis, Tooltip, ResponsiveContainer } from 'recharts'
 
 export const Chart = () => {
   const data = [
@@ -85,8 +78,22 @@ export const Chart = () => {
         }}
         barSize={16}
       >
-        <YAxis />
-        <Tooltip />
+        <YAxis dataKey='pv' />
+        <Tooltip
+          itemStyle={{ fontSize: '16px' }}
+          labelStyle={{ display: 'none' }}
+          wrapperStyle={{
+            outline: 'none',
+            background: '#282c35',
+            borderRadius: '7px',
+          }}
+          contentStyle={{
+            backgroundColor: 'none',
+            background: 'none',
+            border: 0,
+          }}
+          cursor={{ fill: 'transparent' }}
+        />
         <Bar dataKey='pv' fill='#9fef00' />
       </BarChart>
     </ResponsiveContainer>

@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux'
 import { setAddIntoTeam } from '@/redux/modal/slice'
 
 const Team = () => {
-  const team = true
+  const team = false
   const [page, setPage] = useState<string>('Инфо')
   const [edit, setEdit] = useState<boolean>(false)
   const dispatch = useDispatch()

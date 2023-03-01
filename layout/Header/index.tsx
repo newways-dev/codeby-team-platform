@@ -45,9 +45,6 @@ export const Header = ({ className }: HeaderProps) => {
         />
         {openMenu && <MobileMenu className={styles.mobileMenu} />}
         <div className={styles.options}>
-          <button className={styles.telegram}>
-            <Telegram />
-          </button>
           <div className={styles.rightWrapper}>
             <Link href='/notifications'>
               <div className={styles.notification}>

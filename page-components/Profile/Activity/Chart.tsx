@@ -87,7 +87,21 @@ export const Chart = () => {
       >
         <XAxis dataKey='name' />
         <YAxis />
-        <Tooltip />
+        <Tooltip
+          itemStyle={{ fontSize: '16px' }}
+          labelStyle={{ display: 'none' }}
+          wrapperStyle={{
+            outline: 'none',
+            background: '#282c35',
+            borderRadius: '7px',
+          }}
+          contentStyle={{
+            backgroundColor: 'none',
+            background: 'none',
+            border: 0,
+          }}
+          cursor={{ fill: 'transparent' }}
+        />
         <Line type='monotone' dataKey='uv' stroke='#9fef00' />
       </LineChart>
     </ResponsiveContainer>

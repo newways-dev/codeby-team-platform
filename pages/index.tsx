@@ -22,7 +22,7 @@ const Home = () => {
       <Card title='Последние новости' className={styles.news}>
         <News />
       </Card>
-      <Card title='Команды' className={styles.teams}>
+      <Card title='Команда' className={styles.teams}>
         <Teams />
       </Card>
       <Card title='Рейтинг Топ-10 участников' className={styles.top10}>

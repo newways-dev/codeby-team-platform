@@ -76,9 +76,23 @@
       }
 
       li {
-        padding: 8px 0px;
+        cursor: pointer;
+        padding: 8px 10px;
         display: flex;
         align-items: center;
+
+        position: relative;
+        margin-left: -10px;
+
+        border-radius: 8px;
+
+        a {
+          width: 100%;
+        }
+
+        &:hover {
+          background-color: var(--background-secondary);
+        }
 
         .activeBorder {
           margin-top: -5px;

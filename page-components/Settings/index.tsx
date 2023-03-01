@@ -34,12 +34,6 @@ export const Settings = () => {
           >
             Безопасность
           </li>
-          <li
-            className={clsx({ [styles.active]: page === 'notifications' })}
-            onClick={() => setPage('notifications')}
-          >
-            Уведомления
-          </li>
         </ul>
       </div>
       {mobilePage === 'none' && (
