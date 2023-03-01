@@ -11,9 +11,11 @@ import Menu from '../../public/icons/menu.svg'
 import BellCircle from '../../public/icons/bell-circle.svg'
 import styles from './Header.module.scss'
 import { selectMenu } from '@/redux/mobileMenu/selector'
+import Telegram from '../../public/icons/telegram.svg'
 import { useDispatch, useSelector } from 'react-redux'
 import { setOpen } from '@/redux/mobileMenu/slice'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 export interface HeaderProps
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {}
@@ -34,6 +36,7 @@ export const Header = ({ className }: HeaderProps) => {
           {route === '/settings' && 'Настройки'}
           {route === '/admin' && 'Панель администратора'}
           {route === '/team' && 'Команда'}
+          {route === '/notifications' && 'Уведомления'}
         </span>
         <p></p>
         <Menu
@@ -41,14 +44,17 @@ export const Header = ({ className }: HeaderProps) => {
           onClick={() => dispatch(setOpen(!openMenu))}
         />
         {openMenu && <MobileMenu className={styles.mobileMenu} />}
-        <MobileSearch className={styles.mobileSearch} />
         <div className={styles.options}>
-          <Search className={styles.search} />
+          <button className={styles.telegram}>
+            <Telegram />
+          </button>
           <div className={styles.rightWrapper}>
-            <div className={styles.notification}>
-              <Notification />
-              <BellCircle className={styles.circle} />
-            </div>
+            <Link href='/notifications'>
+              <div className={styles.notification}>
+                <Notification />
+                <BellCircle className={styles.circle} />
+              </div>
+            </Link>
             <Profile className={styles.profile} />
           </div>
         </div>

@@ -9,7 +9,6 @@ import styles from './CreateTeam.module.scss'
 export const CreateTeam = () => {
   const [name, setName] = useState<string>('')
   const [desc, setDesc] = useState<string>('')
-  const [password, setPassword] = useState<string>('')
   const dispatch = useDispatch()
 
   return (
@@ -34,14 +33,6 @@ export const CreateTeam = () => {
             onChange={(e) => setDesc(e.currentTarget.value)}
             placeholder='Введите описание команды'
             type='textarea'
-          />
-          <Input
-            title='Пароль'
-            status='default'
-            onChange={(e) => setPassword(e.currentTarget.value)}
-            value={password}
-            placeholder='Введите пароль'
-            type='password'
           />
         </div>
         <div className={styles.buttons}>

@@ -29,6 +29,20 @@
     }
   }
 
+  .buttons {
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 10px;
+
+    button {
+      font-size: 12px;
+      width: 100px;
+      height: 35px;
+    }
+  }
+
   .close {
     cursor: pointer;
     position: absolute;

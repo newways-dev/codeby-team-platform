@@ -1,0 +1,47 @@
+.requests {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+
+  .request {
+    width: 100%;
+    padding: 8px 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: var(--background);
+    border-radius: 14px;
+    height: 60px;
+
+    span {
+      @media screen and (max-width: 500px) {
+        font-size: 12px;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      @media screen and (max-width: 500px) {
+        gap: 8px;
+      }
+
+      button {
+        width: 120px;
+        height: 36px;
+        font-size: 14px;
+
+        @media screen and (max-width: 500px) {
+          width: 84px;
+          height: 32px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

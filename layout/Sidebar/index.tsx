@@ -11,6 +11,7 @@ import { selectUserRole } from '@/redux/user/selector'
 import { useDispatch, useSelector } from 'react-redux'
 import CloseIcon from '../../public/icons/close.svg'
 import MiniLogo from './icons/mini-logo.svg'
+import DashboardActive from './icons/dashboard-active.svg'
 import Logo from './icons/logo.svg'
 import styles from './Sidebar.module.scss'
 
@@ -93,7 +94,8 @@ export const Sidebar = ({ className }: SidebarProps) => {
                   route === routes[0].path && styles.activeRouteIcon
                 )}
               >
-                {routes[0].icon}
+                {route === '/' && <DashboardActive />}
+                {route !== '/' && routes[0].icon}
               </div>
               {open && <p>{routes[0].name}</p>}
               <div

@@ -2,7 +2,7 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import { withLayout } from '@/layout/Layout'
 import { Button, IconButton, Select } from '@/components'
-import { NoTeam, Participants, TeamInfo } from '@/page-components'
+import { NoTeam, Participants, Requests, TeamInfo } from '@/page-components'
 import styles from '../styles/Team.module.scss'
 import { useDispatch } from 'react-redux'
 import { setAddIntoTeam } from '@/redux/modal/slice'
@@ -27,7 +27,7 @@ const Team = () => {
               variant='black'
               showTitle={false}
               title={page}
-              options={['Инфо', 'Участники']}
+              options={['Инфо', 'Участники', 'Заявки']}
             />
 
             <div className={styles.mobileButtons}>
@@ -68,6 +68,12 @@ const Team = () => {
               >
                 Участники
               </li>
+              <li
+                className={clsx({ [styles.active]: page === 'Заявки' })}
+                onClick={() => setPage('Заявки')}
+              >
+                Заявки
+              </li>
             </ul>
             <div className={styles.buttons}>
               {page === 'Инфо' && (
@@ -97,6 +103,7 @@ const Team = () => {
       )}
       {team && page === 'Инфо' && <TeamInfo />}
       {team && page === 'Участники' && <Participants />}
+      {team && page === 'Заявки' && <Requests />}
     </div>
   )
 }

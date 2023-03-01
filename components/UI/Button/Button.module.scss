@@ -36,4 +36,8 @@
   font-weight: 500;
   font-size: 14px;
   color: #fff;
+
+  &:active {
+    background-color: #f02f2f;
+  }
 }
