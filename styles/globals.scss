@@ -73,6 +73,15 @@ a {
   }
 }
 
+.recharts-bar-rectangle {
+  path {
+    &:hover {
+      cursor: pointer;
+      fill: var(--orange);
+    }
+  }
+}
+
 :root {
   --background: #1a1c22;
   --background-secondary: #282c35;
