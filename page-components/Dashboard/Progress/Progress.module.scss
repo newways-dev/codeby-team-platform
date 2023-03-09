@@ -8,11 +8,12 @@
 
     .image {
       border-radius: 50%;
-
+      width: 92px;
+      height: 92px;
       img {
         width: 92px;
         height: 92px;
-        object-fit: cover;
+        object-fit: contain;
       }
     }
 

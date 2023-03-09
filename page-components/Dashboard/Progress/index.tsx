@@ -15,8 +15,8 @@ export const Progress = () => {
           className={styles.image}
           src={photo}
           alt=''
-          height={92}
-          width={92}
+          // height={92}
+          // width={92}
         />
         <div className={styles.info}>
           <span>Никнейм</span>
