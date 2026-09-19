@@ -1,9 +1,9 @@
 # Codeby Team Platform
 
-![Next.js](https://img.shields.io/badge/Next.js-13-black?logo=next.js)
-![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?logo=typescript)
-![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.9-764ABC?logo=redux)
-![Status](https://img.shields.io/badge/status-freelance%20snapshot-lightgrey)
+![Next.js](https://img.shields.io/badge/Next.js-13-black?style=for-the-badge&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-4.9-blue?style=for-the-badge&logo=typescript)
+![Redux Toolkit](https://img.shields.io/badge/Redux%20Toolkit-1.9-764ABC?style=for-the-badge&logo=redux)
+![Status](https://img.shields.io/badge/status-freelance%20snapshot-lightgrey?style=for-the-badge)
 
 Frontend for a gamified training platform for [Codeby Academy](https://codeby.net/) — an information security / penetration testing community. Users complete challenges organized by category (administration, cryptography, forensics, etc.), earn points, compete on leaderboards, and can join teams. Admins manage users, news, categories and challenges through a separate panel.
 
